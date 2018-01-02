@@ -17,6 +17,7 @@ const getters = {
 //如何改变IncrementNumber
 const mutations = {
   [types.INCREMENT_NUMBER]: (state, payload) => {
+//将在前面进行传值操作
     state.current += payload.data;
   },
   [types.SET_CENTER]: (state, payload) => {

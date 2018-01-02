@@ -36,7 +36,8 @@
     },
     computed: {
       ...mapState(["sample_one"]), // 第一种方式：一次性引入sample_mo的所有state ,调用{{sample_mo.current}}
-      ...mapGetters(["current", "number"]) // 第二种方式：引入所有sample里getter里的所有的内容，调用{{number}}
+     
+     ...mapGetters(["current", "number"]) // 第二种方式：引入所有sample里getter里的所有的内容，调用{{number}}
     }
   };
 </script>

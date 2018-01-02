@@ -23,8 +23,15 @@
         'count'
       ])
     },
+    mounted() {
+      this.init()
+    },
     //下面是将更改值的方法一并引入。
     methods: {
+      init(){
+        var getData=this.$store.getters.number //获取值
+      },
+
       ...mapActions([
         'increment',
         'decrement',
