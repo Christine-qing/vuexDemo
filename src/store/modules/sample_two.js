@@ -3,7 +3,7 @@ import * as types from '../mutation-types'
 
 
 const state = {
-  count: 1, //第二个vuex示例
+  count: 1, 
 }
 
 //获取值
@@ -53,7 +53,7 @@ const actions = {
     }
   },
 
-  //异步实现
+  //异步实现1秒后调用increment进行增值操作
   incrementAsync({
     commit
   }) {
