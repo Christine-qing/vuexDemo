@@ -14,11 +14,10 @@ const getters = {
   number: state => state.number,
   center:state=>state.center,
 }
-//如何改变
+//如何改变IncrementNumber
 const mutations = {
-  [types.ADD_NUMBER]: (state, payload) => {
-    // console.log('payload is ',payload,'state:',state)
-    state.current += payload.amount;
+  [types.INCREMENT_NUMBER]: (state, payload) => {
+    state.current += payload.data;
   },
   [types.SET_CENTER]: (state, payload) => {
     state.center = center
@@ -27,8 +26,8 @@ const mutations = {
 
 //调用mutations来实现改变
 const actions = {
-  addNumber({commit}, payload) {
-    commit(types.ADD_NUMBER, payload)
+  incrementNumber({commit}, payload) {
+    commit(types.INCREMENT_NUMBER, payload)
   },
   setCenter({commit}, payload) {
     commit(types.SET_CENTER, payload)

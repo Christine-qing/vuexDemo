@@ -2,11 +2,10 @@
   <div>
     <button><router-link to="/">返回菜单列表</router-link></button>
     <br> <br>
-    <button type="ghost" @click="add({
-                          type: 'addNumber',
-                          amount: 3,
-                          isUse :true
-                      })">点击+=3</button> 当前值：
+    <button type="ghost" @click="change({
+                          type: 'incrementNumber',
+                          data: 10, 
+                      })">点击+=10</button> 当前值：
     <button>{{sample_one.current}}</button>
     <br>
     <p>第一种获取值的方式:{{sample_one.center}}</p>
@@ -32,7 +31,7 @@
     mounted() {},
     methods: {
       ...mapActions({
-        add: "addNumber" // 将 `this.addNumber()` 映射为 `this.$store.commit('addNumber')`
+        change: "incrementNumber" // 将 `this.addNumber()` 映射为 `this.$store.commit('addNumber')`
       })
     },
     computed: {
